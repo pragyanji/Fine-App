@@ -1,0 +1,354 @@
+.about-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF6B35 0%, #003580 100%);
+  padding: 40px 20px;
+}
+
+.about-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background: var(--background);
+  margin-bottom: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px var(--shadow);
+  animation: slideUp 0.5s ease-out;
+  color: var(--text-primary);
+}
+
+.about-section.last-section {
+  margin-bottom: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #FF6B35;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #FF6B35;
+  margin: 0;
+}
+
+.about-section > p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Steps Container */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step {
+  background: linear-gradient(135deg, #FF6B3515 0%, #00358015 100%);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #FF6B35;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-primary);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 107, 53, 0.2);
+}
+
+.dark-theme .step {
+  background: var(--surface);
+  border-left-color: #FF6B35;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #FF6B35 0%, #003580 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  color: var(--text-primary);
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.step p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #FF6B35;
+  color: var(--text-primary);
+}
+
+.dark-theme .feature-card {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(255, 107, 53, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #FF6B35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-card h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dark-theme .feature-card h3 {
+  color: #FF6B35;
+}
+
+.dark-theme .feature-card p {
+  color: var(--text-primary);
+}
+
+/* Benefits List */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.benefit-item {
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 5px solid #FF6B35;
+  color: var(--text-primary);
+}
+
+.dark-theme .benefit-item {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.benefit-item h3 {
+  color: #FF6B35;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.dark-theme .benefit-item h3 {
+  color: #FF6B35;
+}
+
+.benefit-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-item li {
+  color: var(--text-primary);
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.benefit-item li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FF6B35;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, #FF6B35 0%, #003580 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.tech-item h3 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.tech-item p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
+/* Links */
+a {
+  color: #FF6B35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #003580;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .about-section {
+    padding: 25px;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px 15px;
+  }
+
+  .about-header {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .about-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-section > p {
+    font-size: 1rem;
+  }
+
+  .tech-stack {
+    grid-template-columns: 1fr;
+  }
+}

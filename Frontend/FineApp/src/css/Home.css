@@ -1,0 +1,297 @@
+.home-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #FF6B35 0%, #003580 100%);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.fine-form {
+  background: var(--background);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--shadow);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .fine-form {
+    padding: 25px;
+  }
+}
+
+.form-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.form-section h2 {
+  color: #FF6B35;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+  
+  .form-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.number-plate-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.number-plate-input input {
+  flex: 1;
+}
+
+.number-plate-input input:focus {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.fetch-btn {
+  padding: 12px 24px;
+  background: #FF6B35;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.fetch-btn:hover:not(:disabled) {
+  background: #E55A24;
+}
+
+.fetch-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.vehicle-details-info {
+  margin-top: 10px;
+  padding: 12px 15px;
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  border-radius: 4px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .number-plate-input {
+    flex-direction: column;
+  }
+
+  .fetch-btn {
+    width: 100%;
+  }
+
+  .home-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-container {
+    padding: 25px 15px;
+  }
+}
+
+.photo-upload {
+  position: relative;
+  border: 3px dashed #FF6B35;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.photo-upload:hover {
+  background: #f0f0f0;
+}
+
+.dark-theme .photo-upload {
+  background: var(--surface);
+}
+
+.dark-theme .photo-upload:hover {
+  background: #3d3d3d;
+}
+
+.photo-upload input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.photo-upload input[type='file'] {
+  padding: 30px;
+  background: transparent;
+}
+
+.photo-upload small {
+  display: block;
+  color: #666;
+  margin-top: 10px;
+}
+
+.dark-theme .photo-upload small {
+  color: var(--text-secondary);
+}
+
+.photo-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.photo-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+
+.photo-preview p {
+  color: #4caf50;
+  font-weight: 600;
+  margin: 10px 0 0 0;
+}
+
+.submit-section {
+  text-align: center;
+}
+
+.submit-btn {
+  padding: 15px 50px;
+  background: linear-gradient(135deg, #FF6B35 0%, #003580 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-info {
+  margin-top: 15px;
+  color: #FF6B35;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Form validation states */
+.form-group input:invalid {
+  border-color: #f44336;
+}
+
+.form-group input:valid:not([value='']):not([type='file']) {
+  border-color: #4caf50;
+}
