@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../css/Home.css';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
 function Home() {
   const [formData, setFormData] = useState({
     numberPlate: '',
@@ -49,7 +51,7 @@ function Home() {
     try {
       // API call to fetch vehicle details based on number plate
       const response = await fetch(
-        `/api/vehicle/details/?number_plate=${formData.numberPlate}`
+        `${API_BASE_URL}/api/vehicle/details/?number_plate=${formData.numberPlate}`
       );
       const data = await response.json();
 
@@ -97,7 +99,7 @@ function Home() {
     formDataToSend.append('photo_proof', formData.photoProof);
 
     try {
-      const response = await fetch('/api/fines/create/', {
+      const response = await fetch(`${API_BASE_URL}/api/fines/create/`, {
         method: 'POST',
         body: formDataToSend,
       });
