@@ -37,8 +37,9 @@ class Vehicle(models.Model):
         blank=True,
         help_text="Vehicle engine/chassis number"
     )
-    owner_name = models.CharField(
-        max_length=150,
+    owner_name = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
         help_text="Registered owner's name"
     )
     owner_phone = models.CharField(
